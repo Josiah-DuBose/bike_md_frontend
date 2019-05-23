@@ -1,0 +1,127 @@
+@import "../shared/mixins.scss";
+@import "../shared/variables.scss";
+
+.indexbody{
+    margin: 0;
+    background-image:
+     url("../shared/images/index-background.jpg");
+     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+     background-repeat:no-repeat;
+  } 
+  
+    .indexnav{
+      width:11%;
+      margin-left:14%;
+      background-color:rgba(white, .3);
+      padding:1%;
+      margin-bottom:0;
+      height: 100%;
+  
+      ul{
+        text-align:right;
+        text-transform:uppercase;
+        padding:0;
+        margin:0;
+        margin-bottom:20%;
+  
+        li{
+          clear:both;
+          list-style-type:none;
+          padding-bottom:1%;
+          @include regularfont;
+  
+          a{
+            text-decoration:none;
+            color:white;
+            position:relative;
+  
+          }
+  
+          a:after{
+            display:block;
+            position:absolute;
+            bottom:0px;
+            height:1.2em;
+            width:0px;
+            background-color:$teal;
+            transition:width .5s;
+            content:"";
+            z-index:-1;
+          }
+  
+          .link1:hover:after{
+            width:150%;
+          }
+  
+          .link2:hover:after{
+            width:134%;
+          }
+  
+          .link3:hover:after{
+            width:133%;
+          }
+        }
+  
+        .logobox{
+          width:100%;
+          margin-bottom:56%;
+  
+          .logo{
+            width:100%;
+          }
+        }
+      }
+    }
+  
+  
+  
+  .loginform .loginfield{
+      height:30px;
+      border:transparent;
+      width: 100%;
+      margin:5% auto;
+      padding:5%;
+      box-sizing:border-box;
+    }
+  
+    input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px white inset;
+  }
+  
+    .loginbutton{
+      height:50px;
+      width:100%;
+      text-align: center;
+      padding:0;
+      background-color:$charcoal;
+      @include regularfont;
+      color: white;
+      text-align:center;
+      margin:5% auto;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      border: 0;
+      cursor: pointer;
+  
+  
+  
+      a{
+        text-decoration:none;
+        color:white;
+        padding:15%;
+      }
+  
+      a:hover{
+        text-decoration:none;
+        color:$teal;
+      }
+    }
+  
+    .loginbutton:hover{
+      background-color:white;
+      color:$charcoal;
+    }
