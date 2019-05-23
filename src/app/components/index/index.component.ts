@@ -12,6 +12,6 @@ export class IndexComponent implements OnInit {
 	constructor(public nav: NavBarService) { }
 
 	ngOnInit() {
-
+		this.nav.show();
 	}
 }

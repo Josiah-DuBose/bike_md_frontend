@@ -6,17 +6,23 @@
 		<li>
 			<form id="searchThis" class="search-form">
 				<input id="searchBox" class="search-field" value="Search Problems" type="text">
-				<input href="#searchModal" id="searchButton" class="search-submit" value="Go" type="submit" data-remodal-target="searchModal">
+				<button id="searchButton" 
+					class="search-submit" 
+					data-toggle="modal" 
+					data-target="#searchModal">Go
+				</button>	
 			</form>
 		</li>
-		<div class="search-modal-container">
-			<div class="remodal" data-remodal-id="searchModal">
-				<button data-remodal-action="close" class="remodal-close"></button>
-				<div class="goldendecor">
-					<h1 class="modal-header">Search Results</h1>
-				</div>
-				<div id="searchProblemList" class="search-problem-list">
-					
+		<div class="modal fade" id="searchModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title goldendecor">Search Results</h5>
+						<button class="close" data-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div id="searchProblemList" class="search-problem-list"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -24,43 +30,47 @@
 		<li><a href="/" class="link1">Diagnose</a></li>
 
 		<li>
-			<a href="#askModal" id="ask" class="link2" data-remodal-target="askModal">Post a Problem</a>
+			<button id="ask" class="link2" data-remodal-target="askModal">Post a Problem</button>
 		</li>
-		<div class="askmodal-container">
-			<div class="remodal" data-remodal-id="askModal">
-				<button data-remodal-action="close" class="remodal-close"></button>
-				<form class="newProblem">
-					<input id="userId" type="hidden" value="userId">
-					<div class="goldendecor">
-						<h1 class="modal-header">Post a Problem</h1>
+		<div class="modal fade" id="askModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="goldendecor">
+							<h1>Post a Problem</h1>
+						</div>
+						<button class="close" data-dismiss="modal" aria-label="Close"></button>
 					</div>
-
-					<h4 class="modaltext">Choose Bike:</h4>
-					<div class="select-brand-model-year containerDropdown">
-						<div class="bikeFeature">
-							<div id="brandSelect" class="systems-dropdown"></div>
-						</div>
-						<div class="bikeFeature">
-							<div id="yearSelect" class="systems-dropdown"></div>
-						</div>
-						<div class="bikeFeature">
-							<div id="modelSelect" class="systems-dropdown"></div>
-						</div>
-						<div class="bikeFeature">
-							<h4 class="modaltext-1">Choose System:</h4>
-							<div id="systemSelect" class="systems-dropdown"></div>
-						</div>
+					<div class="modal-body">
+						<form class="newProblem">
+							<input id="userId" type="hidden" value="userId">
+							<h4 class="modaltext">Choose Bike:</h4>
+							<div class="select-brand-model-year containerDropdown">
+								<div class="bikeFeature">
+									<div id="brandSelect" class="systems-dropdown"></div>
+								</div>
+								<div class="bikeFeature">
+									<div id="yearSelect" class="systems-dropdown"></div>
+								</div>
+								<div class="bikeFeature">
+									<div id="modelSelect" class="systems-dropdown"></div>
+								</div>
+								<div class="bikeFeature">
+									<h4 class="modaltext-1">Choose System:</h4>
+									<div id="systemSelect" class="systems-dropdown"></div>
+								</div>
+							</div>
+							<br>
+							<h4 class="modaltext">Enter a title for your post:</h4>
+							<input id="probTitle" class="problemtitle-field" type="text" name="probTitle" value="">
+							<h4 class="modaltext">Describe your problem:</h4>
+							<textarea id="probText" type="text" name="probText" value="" rows="10" cols="65"></textarea>
+							<p class="counterAsk" id="counter"></p>
+							<br>
+							<input id="newProbSubmit" class="submit-button" type="submit" value="Submit" data-dismiss="modal">
+						</form>
 					</div>
-
-					<br>
-					<h4 class="modaltext">Enter a title for your post:</h4>
-					<input id="probTitle" class="problemtitle-field" type="text" name="probTitle" value="">
-					<h4 class="modaltext">Describe your problem:</h4>
-					<textarea id="probText" type="text" name="probText" value="" rows="10" cols="65"></textarea>
-					<p class="counterAsk" id="counter"></p>
-					<br>
-					<input id="newProbSubmit" class="submit-button" data-remodal-action="close" type="submit" value="Submit">
-				</form>
+				</div>
 			</div>
 		</div>
 
