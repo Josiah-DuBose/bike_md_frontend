@@ -8,5 +8,7 @@ export class NavBarService {
 
 	constructor() { }
 
-	show() { this.visible = true; }
+	show() { 
+		this.visible = true; 
+	}
 }
