@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PostComponent } from './post/post.component';
 import { RegisterComponent } from './register/register.component';
+import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 
 @NgModule({
 	declarations: [
@@ -14,7 +15,8 @@ import { RegisterComponent } from './register/register.component';
 		HomeComponent,
 		LoginComponent,
 		PostComponent,
-		RegisterComponent
+		RegisterComponent,
+		NavBarComponent
 	],
 	imports: [
 		CommonModule
